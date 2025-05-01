@@ -1,0 +1,241 @@
+BTC
+BTC+EMA
+BTC+Nasdaq
+BTC+Google trends
+BTC+EMA++Nasdaq
+BTC+EMA+Google trends
+BTC+Nasdaq+Google trends
+BTC+EMA++Nasdaq+Google trends
+BTC+EMA++Nasdaq+Google trends+latest_size 
+
+Request1：Bilstm，GRU，分别处理这8套数据，窗口设置为3，10，在不同窗口大小下，
+有指标：mse rmse mae mape R^2之类 可视化真实价格和预测价格的折线图，残差图、误差直方图 变量之间的相关性热图。
+另外，可视化 3天窗口 BiLSTM 9个变量组合 MAPE 柱状图(单独开一个文件)
+Request2：之前的Close重新运行3天的结果，保存交付
+
+两个大需求，两个文件夹
+
+下面的内容是对每组实验做的记录
+
+Close
+Bilstm 3
+Mean Squared Error (MSE): 1827303.1250
+Root Mean Squared Error (RMSE): 1351.7777
+Mean Absolute Error (MAE): 920.0294
+Mean Absolute Percentage Error (MAPE): 3.1746
+R² Score: 0.9824
+GRU 3
+Mean Squared Error (MSE): 1559648.1250
+Root Mean Squared Error (RMSE): 1248.8588
+Mean Absolute Error (MAE): 838.7874
+Mean Absolute Percentage Error (MAPE): 2.8936
+R² Score: 0.9849
+
+
+EMA
+Bilstm 3
+Mean Squared Error (MSE): 159237.2500
+Root Mean Squared Error (RMSE): 399.0454
+Mean Absolute Error (MAE): 250.8456
+Mean Absolute Percentage Error (MAPE): 3.1076
+R² Score: 0.9733
+Bilstm 10
+Mean Squared Error (MSE): 207786.7188
+Root Mean Squared Error (RMSE): 455.8363
+Mean Absolute Error (MAE): 300.4066
+Mean Absolute Percentage Error (MAPE): 3.7327
+R² Score: 0.9650
+GRU 3
+Mean Squared Error (MSE): 161424.4219
+Root Mean Squared Error (RMSE): 401.7766
+Mean Absolute Error (MAE): 251.6314
+Mean Absolute Percentage Error (MAPE): 3.1086
+R² Score: 0.9729
+GRU 10
+Mean Squared Error (MSE): 155374.2812
+Root Mean Squared Error (RMSE): 394.1754
+Mean Absolute Error (MAE): 247.6634
+Mean Absolute Percentage Error (MAPE): 3.0620
+R² Score: 0.9738
+
+EMA+Google trends
+Bilstm 3
+Mean Squared Error (MSE): 248093.5938
+Root Mean Squared Error (RMSE): 498.0899
+Mean Absolute Error (MAE): 296.0536
+Mean Absolute Percentage Error (MAPE): 3.5129
+R² Score: 0.9584
+Bilstm 10
+Mean Squared Error (MSE): 243843.7188
+Root Mean Squared Error (RMSE): 493.8054
+Mean Absolute Error (MAE): 295.3053
+Mean Absolute Percentage Error (MAPE): 3.5087
+R² Score: 0.9589
+GRU 3
+Mean Squared Error (MSE): 173339.3438
+Root Mean Squared Error (RMSE): 416.3404
+Mean Absolute Error (MAE): 261.2027
+Mean Absolute Percentage Error (MAPE): 3.2409
+R² Score: 0.9709
+GRU 10
+Mean Squared Error (MSE): 160084.5312
+Root Mean Squared Error (RMSE): 400.1057
+Mean Absolute Error (MAE): 254.9866
+Mean Absolute Percentage Error (MAPE): 3.1684
+R² Score: 0.9730
+
+Google trends
+Bilstm 3
+Mean Squared Error (MSE): 194210.3438
+Root Mean Squared Error (RMSE): 440.6930
+Mean Absolute Error (MAE): 263.1635
+Mean Absolute Percentage Error (MAPE): 3.1871
+R² Score: 0.9674
+Bilstm 10
+Mean Squared Error (MSE): 191180.5781
+Root Mean Squared Error (RMSE): 437.2420
+Mean Absolute Error (MAE): 264.5383
+Mean Absolute Percentage Error (MAPE): 3.2239
+R² Score: 0.9678
+GRU 3
+Mean Squared Error (MSE): 162056.6406
+Root Mean Squared Error (RMSE): 402.5626
+Mean Absolute Error (MAE): 249.9871
+Mean Absolute Percentage Error (MAPE): 3.0898
+R² Score: 0.9728
+GRU 10
+Mean Squared Error (MSE): 155149.2031
+Root Mean Squared Error (RMSE): 393.8898
+Mean Absolute Error (MAE): 250.1806
+Mean Absolute Percentage Error (MAPE): 3.0975
+R² Score: 0.9739
+
+Nasdaq
+Bilstm 3
+Mean Squared Error (MSE): 172669.2656
+Root Mean Squared Error (RMSE): 415.5349
+Mean Absolute Error (MAE): 271.8355
+Mean Absolute Percentage Error (MAPE): 3.4182
+R² Score: 0.9710
+Bilstm 10
+Mean Squared Error (MSE): 163404.3906
+Root Mean Squared Error (RMSE): 404.2331
+Mean Absolute Error (MAE): 257.4115
+Mean Absolute Percentage Error (MAPE): 3.1961
+R² Score: 0.9725
+GRU 3
+Mean Squared Error (MSE): 162801.6562
+Root Mean Squared Error (RMSE): 403.4869
+Mean Absolute Error (MAE): 257.0699
+Mean Absolute Percentage Error (MAPE): 3.1925
+R² Score: 0.9727
+GRU 10
+Mean Squared Error (MSE): 158851.3750
+Root Mean Squared Error (RMSE): 398.5616
+Mean Absolute Error (MAE): 252.9398
+Mean Absolute Percentage Error (MAPE): 3.1433
+R² Score: 0.9732
+
+Nasdaq+EMA
+Bilstm 3
+Mean Squared Error (MSE): 163632.9062
+Root Mean Squared Error (RMSE): 404.5157
+Mean Absolute Error (MAE): 257.0656
+Mean Absolute Percentage Error (MAPE): 3.1913
+R² Score: 0.9725
+Bilstm 10
+Mean Squared Error (MSE): 162090.6250
+Root Mean Squared Error (RMSE): 402.6048
+Mean Absolute Error (MAE): 255.7078
+Mean Absolute Percentage Error (MAPE): 3.1746
+R² Score: 0.9727
+GRU 3
+Mean Squared Error (MSE): 172722.7031
+Root Mean Squared Error (RMSE): 415.5992
+Mean Absolute Error (MAE): 268.4047
+Mean Absolute Percentage Error (MAPE): 3.3748
+R² Score: 0.9710
+GRU 10
+Mean Squared Error (MSE): 160266.6719
+Root Mean Squared Error (RMSE): 400.3332
+Mean Absolute Error (MAE): 254.6582
+Mean Absolute Percentage Error (MAPE): 3.1750
+R² Score: 0.9730
+
+Nasdaq+EMA+Google trends
+Bilstm 3
+Mean Squared Error (MSE): 167096.6562
+Root Mean Squared Error (RMSE): 408.7746
+Mean Absolute Error (MAE): 254.8482
+Mean Absolute Percentage Error (MAPE): 3.1678
+R² Score: 0.9720
+Bilstm 10
+Mean Squared Error (MSE): 182001.4688
+Root Mean Squared Error (RMSE): 426.6163
+Mean Absolute Error (MAE): 260.9498
+Mean Absolute Percentage Error (MAPE): 3.2031
+R² Score: 0.9693
+GRU 3
+Mean Squared Error (MSE): 177008.0625
+Root Mean Squared Error (RMSE): 420.7233
+Mean Absolute Error (MAE): 267.5391
+Mean Absolute Percentage Error (MAPE): 3.3319
+R² Score: 0.9703
+GRU 10
+Mean Squared Error (MSE): 166548.6406
+Root Mean Squared Error (RMSE): 408.1037
+Mean Absolute Error (MAE): 259.9942
+Mean Absolute Percentage Error (MAPE): 3.2472
+R² Score: 0.9719
+
+Nasdaq+EMA+Google trends+latest size
+Bilstm 3
+Mean Squared Error (MSE): 212356.1250
+Root Mean Squared Error (RMSE): 460.8211
+Mean Absolute Error (MAE): 305.0726
+Mean Absolute Percentage Error (MAPE): 3.7868
+R² Score: 0.9644
+Bilstm 10
+Mean Squared Error (MSE): 235259.2969
+Root Mean Squared Error (RMSE): 485.0354
+Mean Absolute Error (MAE): 326.8246
+Mean Absolute Percentage Error (MAPE): 4.2155
+R² Score: 0.9604
+GRU 3
+Mean Squared Error (MSE): 177561.8750
+Root Mean Squared Error (RMSE): 421.3809
+Mean Absolute Error (MAE): 277.2485
+Mean Absolute Percentage Error (MAPE): 3.5057
+R² Score: 0.9702
+GRU 10
+Mean Squared Error (MSE): 183311.0000
+Root Mean Squared Error (RMSE): 428.1483
+Mean Absolute Error (MAE): 291.8904
+Mean Absolute Percentage Error (MAPE): 3.7427
+R² Score: 0.9691
+
+Nasdaq+Google trends
+Bilstm 3
+Mean Squared Error (MSE): 173819.9375
+Root Mean Squared Error (RMSE): 416.9172
+Mean Absolute Error (MAE): 254.1063
+Mean Absolute Percentage Error (MAPE): 3.1214
+R² Score: 0.9708
+Bilstm 10
+Mean Squared Error (MSE): 160445.0625
+Root Mean Squared Error (RMSE): 400.5559
+Mean Absolute Error (MAE): 251.9221
+Mean Absolute Percentage Error (MAPE): 3.1207
+R² Score: 0.9730
+GRU 3
+Mean Squared Error (MSE): 170323.1719
+Root Mean Squared Error (RMSE): 412.7023
+Mean Absolute Error (MAE): 259.0881
+Mean Absolute Percentage Error (MAPE): 3.2177
+R² Score: 0.9714
+GRU 10
+Mean Squared Error (MSE): 161449.9062
+Root Mean Squared Error (RMSE): 401.8083
+Mean Absolute Error (MAE): 252.9403
+Mean Absolute Percentage Error (MAPE): 3.1539
+R² Score: 0.9728
